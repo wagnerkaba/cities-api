@@ -11,7 +11,7 @@
 
 ## DataBase
 
-### Postgres
+### `Postgres`
 
 * [Postgres Docker Hub](https://hub.docker.com/_/postgres)
 
@@ -28,15 +28,48 @@ cd ~/workspace/sql-paises-estados-cidades/PostgreSQL
 
 docker run -it --rm --net=host -v $PWD:/tmp postgres /bin/bash
 
+```
+
+* To run an image inside of a container, we use the `docker run` command. 
+
+* For interactive processes (like a shell), you must use `-i -t` together in order to allocate a tty (terminal) for the container process. `-i -t` is often written `-it` as you’ll see in later examples.
+* The `--net=host` option is used to make the programs inside the Docker container look like they are running on the host itself, from the perspective of the network. It allows the container greater network access than it can normally get.
+* PWD is an environment variable that your shell will expand to your current working directory. So in this example, it would mount the current working directory, from where you are executing this command, to /tmp inside your container.
+* `postgres` é o nome da imagem que será executada no container
+* `/bin/bash` serve para especificar que você quer um shell ( interpretador de comandos do linux)
+
+
+
+#### Comandos para serem executados dentro do container docker com o fim de criar as tabelas:
+
+```
 psql -h localhost -U postgres_user_city cities -f /tmp/pais.sql
 psql -h localhost -U postgres_user_city cities -f /tmp/estado.sql
 psql -h localhost -U postgres_user_city cities -f /tmp/cidade.sql
+```
 
+* `-h *hostname*`  Specifies the host name of the machine on which the server is running.
+* `-U *username*`Connect to the database as the user *`username`* instead of the default. (You must have permission to do so, of course.)
+* `cities` É o nome do banco de dados
+* `-f *filename*` Read commands from the file *`filename`*, rather than standard input.
+
+
+
+```
 psql -h localhost -U postgres_user_city cities
+```
 
+* O comando acima faz com que você entre dentro do banco de dados `cities`
+* Experimente escrever o comando: `select * from pais;`
+
+
+
+```
 CREATE EXTENSION cube; 
 CREATE EXTENSION earthdistance;
 ```
+
+
 
 * [Postgres Earth distance](https://www.postgresql.org/docs/current/earthdistance.html)
 * [earthdistance--1.0--1.1.sql](https://github.com/postgres/postgres/blob/master/contrib/earthdistance/earthdistance--1.0--1.1.sql)
