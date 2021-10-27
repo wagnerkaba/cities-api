@@ -64,6 +64,8 @@ psql -h localhost -U postgres_user_city cities
 
 
 
+#### Extensões do Postgres para cálculo de distância entre duas localizações 
+
 ```
 CREATE EXTENSION cube; 
 CREATE EXTENSION earthdistance;
