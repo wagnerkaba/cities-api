@@ -1,5 +1,11 @@
 # Cities API
 
+## API documentation:
+
+https://wkcitiesapi.herokuapp.com/swagger-ui.html
+
+
+
 ## Requirements
 
 * Linux
@@ -19,9 +25,13 @@
 docker run --name cities-db -d -p 5432:5432 -e POSTGRES_USER=postgres_user_city -e POSTGRES_PASSWORD=super_password -e POSTGRES_DB=cities postgres
 ```
 
-### Populate
+### Populate data
 
-* [data](https://github.com/chinnonsantos/sql-paises-estados-cidades/tree/master/PostgreSQL)
+* [Github com dados para popular banco de dados](https://github.com/chinnonsantos/sql-paises-estados-cidades/tree/master/PostgreSQL) 
+
+
+
+#### Comando docker para executar shell do container Postgres:
 
 ```shell script
 cd ~/workspace/sql-paises-estados-cidades/PostgreSQL
