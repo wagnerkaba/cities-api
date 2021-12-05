@@ -17,6 +17,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'com.vladmihalcea:hibernate-types-52:2.9.8'
 	implementation 'org.postgresql:postgresql'
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
 	// https://mvnrepository.com/artifact/io.springfox/springfox-swagger2
