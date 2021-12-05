@@ -13,7 +13,7 @@ https://wkcitiesapi.herokuapp.com/swagger-ui.html
 ## Novas implementações
 
 * [Documentação do projeto utilizando Swagger](https://wkcitiesapi.herokuapp.com/swagger-ui.html)
-* [Confituração do Actuator para mostrar a "saúde" (health) do sistema](https://wkcitiesapi.herokuapp.com/actuator/health)
+* [Configuração do Actuator para mostrar a "saúde" (health) do sistema](https://wkcitiesapi.herokuapp.com/actuator/health)
 
 
 
